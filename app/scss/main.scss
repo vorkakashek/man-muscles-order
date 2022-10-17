@@ -1,0 +1,163 @@
+@import '_imports';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+// Main Styles
+html,
+body {
+	font-family: RF Dewi;
+	font-weight: 300;
+	color: #fff;
+	overflow-x: hidden;
+	overflow-y: auto;
+	font-size: 15px;
+	letter-spacing: .03rem;
+
+	@include respond-to(handlers) {
+		font-size: 14px;
+	}
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+body {
+	background-image: url('../assets/images/dest/bg.webp');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-attachment: fixed;
+}
+
+a {
+	&:not(.link) {
+		color: #fff;
+	}
+}
+
+.container {
+	max-width: 1360px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 16px;
+
+	@include respond-to (medium) {
+		padding: 0 8px;
+	}
+}
+
+h1 {
+	font-family: Bebas Neue, sans-serif;
+	font-weight: 700;
+	margin-bottom: 3rem;
+	font-size: 6rem;
+	line-height: .9;
+
+	@include respond-to (medium) {
+		font-size: 3rem;
+	}
+}
+
+.logo {
+	height: 100px;
+
+	@include respond-to (medium) {
+		height: 80px;
+	}
+}
+
+.header-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header-sign-in {
+	display: flex;
+	align-items: center;
+	font-family: Bebas Neue, serif;
+	font-size: 2rem;
+	cursor: pointer;
+	position: relative;
+	text-decoration: none;
+
+	.icon {
+		margin-right: 16px;
+		fill: var(--purple);
+		width: 30px;
+		height: 30px;
+	}
+
+	span {
+		transition: var(--tr);
+	}
+
+	&:hover {
+		color: #fff;
+
+		.icon {
+			#arrow {
+				animation-name: icon-swipe;
+				animation-duration: .3s;
+				animation-iteration-count: 1;
+				animation-timing-function: ease;
+				animation-fill-mode: backwards;
+			}
+		}
+
+		span {
+			opacity: .5;
+		}
+	}
+
+	@include respond-to (medium) {
+		font-size: 1.8rem;
+
+		.icon {
+			width: 1.8rem;
+			height: 1.8rem;
+			margin-right: .75rem;
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	> * {
+		flex: 1 1 0;
+	}
+}
+
+.order-subtitle {
+	font-size: 1.5rem;
+}
+
+.order-wrap {
+	margin: 1rem 0;
+	display: flex;
+	> * {
+		flex: 1 1 0;
+	}
+}
+
+.order-title {
+	font-size: 4rem;
+	font-family: Bebas Neue, serif;
+	margin: 0;
+}
+
+#timer {
+	font-family: Bebas Neue, serif;
+	font-size: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(82, 15, 251, 0.3);
+	border: 1px solid #520ffb;
+	margin-left: 2rem;
+}

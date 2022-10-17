@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Bebas Neue';
+    src: local('BebasNeue Bold'),
+        local('Bebas Neue Bold'),
+        url('../assets/fonts/BebasNeue/BebasNeue Bold.ttf') format('truetype'),
+        url('../assets/fonts/BebasNeue/BebasNeue Bold.otf') format('otf');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Dewi';
+    src: url('RFDewi-Light.eot');
+    src: local('RF Dewi Light'), local('RFDewi-Light'),
+        url('../assets/fonts/RF Dewi/RFDewi-Light.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/RF Dewi/RFDewi-Light.woff2') format('woff2'),
+        url('../assets/fonts/RF Dewi/RFDewi-Light.woff') format('woff'),
+        url('../assets/fonts/RF Dewi/RFDewi-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Dewi';
+    src: url('RFDewi-Semibold.eot');
+    src: local('RF Dewi Semibold'), local('RFDewi-Semibold'),
+        url('../assets/fonts/RF Dewi/RFDewi-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/RF Dewi/RFDewi-Semibold.woff2') format('woff2'),
+        url('../assets/fonts/RF Dewi/RFDewi-Semibold.woff') format('woff'),
+        url('../assets/fonts/RF Dewi/RFDewi-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

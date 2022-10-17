@@ -1,0 +1,38 @@
+header
+    .container.header-container
+        img.logo(src="assets/images/dest/logo.webp" alt="" loading="lazy")
+        a.header-sign-in(href="#")
+            include ../icons/sign-in
+            span Войти
+        
+    .container
+        h1 Создайте своё 
+            br
+            | идеальное тело
+        
+        .wrapper
+            .order-container
+                .order-subtitle Оформление заказа
+                .order-wrap
+                    h2.order-title
+                        | Ограниченное
+                        br
+                        | предложение
+                    #timer
+                        .timer-icon
+                        span.timer-val 0
+                        | :
+                        span.timer-val 0
+                .order-wrap
+                    img(src="assets/images/dest/percent.webp", alt="" loading="lazy")
+                    .order-price
+                        .order-price-old 889₽
+                        .order-price-new 29₽
+
+            img(src="assets/images/dest/order-img.webp", alt="" loading="lazy")
+
+        
+        form#order
+           label .input-group
+                .mail-icon
+                input(type="email" placeholder="Ваша эл. почта" required)
