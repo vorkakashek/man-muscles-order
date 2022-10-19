@@ -1,0 +1,39 @@
+#timer {
+    font-family: Bebas Neue, sans-serif;
+    font-size: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(82, 15, 251, 0.3);
+    border: 1px solid #520ffb;
+    margin-left: 2rem;
+    align-self: stretch;
+
+    &.timeout {
+        font-family: RF Dewi, sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+
+    @include respond-to (handlers) {
+        padding: 1rem;
+        font-size: 3rem;
+        margin-left: 0;
+    }
+}
+
+.timer-icon {
+    margin-right: 1rem;
+    width: 64px;
+    height: 64px;
+
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: contain;
+
+    @include respond-to (handlers) {
+        width: 40px;
+        height: 40px;
+    }
+}
+

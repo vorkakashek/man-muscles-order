@@ -4,35 +4,71 @@ header
         a.header-sign-in(href="#")
             include ../icons/sign-in
             span Войти
-        
+
     .container
         h1 Создайте своё 
             br
             | идеальное тело
-        
+
         .wrapper
             .order-container
                 .order-subtitle Оформление заказа
-                .order-wrap
+                .order-wrap.order-wrap-header
                     h2.order-title
-                        | Ограниченное
+                        | Ограниченное 
                         br
                         | предложение
                     #timer
-                        .timer-icon
-                        span.timer-val 0
+                        img.timer-icon(src="assets/images/dest/timer.webp" alt="" loading="lazy")
+                        span.timer-val#minutes 0
                         | :
-                        span.timer-val 0
+                        span.timer-val#seconds 0
                 .order-wrap
-                    img(src="assets/images/dest/percent.webp", alt="" loading="lazy")
+                    .order-img
+                        img(src="assets/images/dest/percent.webp" alt="" loading="lazy")
                     .order-price
                         .order-price-old 889₽
-                        .order-price-new 29₽
+                        .order-price-new 29
+                            span ₽
 
-            img(src="assets/images/dest/order-img.webp", alt="" loading="lazy")
+            .main-img
+                img(src="assets/images/dest/order-img.webp" alt="" loading="lazy")
 
-        
-        form#order
-           label .input-group
-                .mail-icon
-                input(type="email" placeholder="Ваша эл. почта" required)
+
+            form#order
+                label.input-item.email
+                    img.mail-icon(src="assets/images/dest/mail.webp" alt="" loading="lazy")
+                    input(type="email" placeholder="Ваша эл. почта" required)
+
+                button.main-btn(type="submit") Оформить заказ
+
+                .input-group
+                    label.input-item.checkbox-group
+                        input(type="checkbox" name="terms" required) 
+                        span.checkbox
+                        span Нажимая кнопку "Получить доступ" Вы даете согласие на 
+                            a(href="#") обработку персональных данных
+                            |  , а также подтверждаете ознакомление с 
+                            a(href="#") публичной офертой
+                            |  и 
+                            a(href="#") тарифами
+                    label.input-item.checkbox-group
+                        input(type="checkbox" checked) 
+                        span.checkbox
+                        span Нажимая кнопку "Получить доступ" Вы подтверждаете ознакомление с автоматическими списаниями. Первое списание в размере 980₽ через 72 часа после подписки и далее, согласно 
+                            a(href="#") тарифу
+                            |  раз в 7 дней 980₽ или 140₽ за день доступа в личный кабинет
+    .container
+        .pay-info 
+            .pay-info-item-group
+                .pay-info-item
+                    include ../icons/guard
+                    span Гарантия возврата средств
+                .pay-info-item
+                    include ../icons/currency
+                    span Без скрытых платежей
+
+            .pay-info-method-group
+                include ../icons/mastercard
+                include ../icons/visa
+                include ../icons/mir
